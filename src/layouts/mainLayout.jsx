@@ -3,12 +3,14 @@ import Top from "../components/top";
 import "../styleSheet/mainLayout.css";
 import { Outlet } from "react-router-dom";
 
-const MainLayout = () => {
+const MainLayout = (props) => {
+  // console.log(props);
+  
   return (
     <>
       <Top />
       <div className="layout">
-        <Aside />
+        <Aside {...props} />
         <div className="working-area">
           <Outlet />
         </div>

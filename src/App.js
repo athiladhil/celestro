@@ -5,47 +5,55 @@ import Home from "./pages/home";
 import Ar from "./pages/ar";
 import About from "./pages/about";
 import ArView from "./pages/arView";
-import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import { useEffect } from "react";
 import Game from "./pages/game";
+import { useState } from "react";
 
 const App = () => {
-  // useEffect(() => {
-  //   window.addEventListener("resize", (e) => {
-  //     const width = window.innerWidth;
-  //     // console.log(width);
-  //     const sliderAnimation = gsap.timeline({
-  //       duration: 2,
-  //       yoyo: true,
-  //     });
-  //     if (width < 950) {
-  //       sliderAnimation
-  //         .to(".aside", {
-  //           x: -250,
-  //           display: "none",
-  //         })
-  //         .to(".working-area", {
-  //           width: "100%",
-  //           duration: 2,
-  //         });
-  //     } else if (width > 950) {
-  //       sliderAnimation
-  //         .to(".aside", {
-  //           x: 0,
-  //           display: "block",
-  //         })
-  //         .to(".working-area", {
-  //           width: "90%",
-  //         });
-  //     }
-  //   });
-  // }, []);
+  const [isAside ,setIsAside]  = useState(true);
+
+  const aside =()=>{
+    const width = window.innerWidth;
+    const sliderAnimation = gsap.timeline({
+      duration: 1,
+      yoyo: true,
+    });
+    if (width < 950) {
+      setIsAside(false);
+      sliderAnimation
+        .to(".aside", {
+          position:"absolute",
+          left:-170,
+          duration: 1,
+        })
+        .to(".working-area", {
+          width: "100%",
+          duration: 1,
+        });
+    } else if (width > 950) {
+      setIsAside(true);
+      sliderAnimation
+        .to(".aside", {
+          position:"static",
+          left:0,
+          duration: 1,
+        })
+        .to(".working-area", {
+          width: "90%",
+          duration: 1,
+        });
+    }
+  }
+  useEffect(() => {
+    window.addEventListener("resize", aside);
+    aside();
+  }, []);
 
   return (
     <Router basename='/celestro'>
       <Routes>
-        <Route path='/' element={<MainLayout />}>
+        <Route path='/' element={<MainLayout isAside={isAside} setIsAside={setIsAside}  />}>
           <Route index path='/' element={<Home />} />
           <Route  path='/game' element={<Game />} />
           <Route path='/ar' element={<Ar />} />

@@ -3,22 +3,61 @@ import { ReactComponent as HomeLogo } from "../images/icons/Aside/Home.svg";
 import { ReactComponent as ARLogo } from "../images/icons/Aside/AR.svg";
 import { ReactComponent as AboutLogo } from "../images/icons/Aside/About.svg";
 import { ReactComponent as ShareLogo } from "../images/icons/Aside/Share.svg";
-import { Link } from "react-router-dom"; // Import Link
+import { ReactComponent as Slider } from "../images/icons/Aside/Slider.svg";
+import { Link } from "react-router-dom";
+import { gsap } from "gsap";
 
-const Aside = () => {
-  const clickBoardCopy =()=>{
-    navigator.clipboard.writeText("https://kaviyarasu26.github.io/celestro").then(()=>{
+const Aside = (props) => {
+  const {isAside,setIsAside} =props;
+  const handleOnClick=()=>{
+    const width = window.innerWidth;
+    const sliderAnimation = gsap.timeline({
+      duration: 1,
+      yoyo: true,
+    });
+    if(isAside){
+      setIsAside(false);
+      sliderAnimation
+        .to(".aside", {
+          position:"absolute",
+          left:-170,
+          duration: 1,
+        })
+        .to(".working-area", {
+          width: "100%",
+          duration: 1,
+        });
+    }else{
+      sliderAnimation
+        .to(".aside", {
+          position:"static",
+          left:0,
+          duration: 1,
+        })
+        .to(".working-area", {
+          width: "90%",
+          duration: 1,
+        });
+    }
+  }
+  const clickBoardCopy = () => {
+    navigator.clipboard.writeText("https://kaviyarasu26.github.io/celestro").then(() => {
       alert("link copied successfully 😊");
-    }).catch((err)=>{
-        console.log(err);
-        alert("Something went wrong 😒")
-        
+    }).catch((err) => {
+      console.log(err);
+      alert("Something went wrong 😒")
+
     })
   }
   return (
     <div className="aside">
       <ul className="nav-list-top" typeof="none">
-        <Link to="/">  {/* Replace href with Link's to */}
+       
+          <div className="slider" >
+              <Slider onClick={handleOnClick}/>
+          </div>
+    
+        <Link to="/">
           <li className="nav-list-item">
             <div className="sub-container">
               <div className="nav-logo">
@@ -28,7 +67,7 @@ const Aside = () => {
             </div>
           </li>
         </Link>
-        <Link to="/ar"> {/* Replace href with Link's to */}
+        <Link to="/ar">
           <li className="nav-list-item">
             <div className="sub-container">
               <div className="nav-logo">
@@ -38,7 +77,7 @@ const Aside = () => {
             </div>
           </li>
         </Link>
-        <Link to="/game">  {/* Replace href with Link's to */}
+        <Link to="/game">
           <li className="nav-list-item">
             <div className="sub-container">
               <div className="nav-logo">
@@ -48,7 +87,7 @@ const Aside = () => {
             </div>
           </li>
         </Link>
-        <Link to="/about"> {/* Replace href with Link's to */}
+        <Link to="/about">
           <li className="nav-list-item">
             <div className="sub-container">
               <div className="nav-logo">

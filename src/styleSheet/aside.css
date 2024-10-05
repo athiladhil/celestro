@@ -1,5 +1,5 @@
 .aside {
-  width: 10%;
+  width: 170px;
   min-width: 170px;
   height: calc(100vh - 7vh);
   background-color: #2f2f2f;
@@ -14,8 +14,7 @@ a {
   text-align: center;
 }
 .nav-list-bottom {
-  position: absolute;
-  bottom: 20px;
+ margin-top: 55vh;
 }
 .nav-list-item,
 .nav-list-item-bottom {
@@ -49,4 +48,10 @@ a {
   display: flex;
   border-radius: 7px;
   padding: 5px 7px;
+}
+.slider{
+  position: absolute;
+  top: 40%;
+  cursor: pointer;
+  left: 170px;
 }
