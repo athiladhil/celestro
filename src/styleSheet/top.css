@@ -1,0 +1,35 @@
+.navbar {
+  width: 100%;
+  height: 7vh;
+  min-height: 58px;
+  background-color: #2f2f2f;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.right-top {
+  display: flex;
+  align-items: center;
+  margin-left: 1%;
+}
+.logo {
+  width: 70px;
+  height: auto;
+}
+.website-name {
+  margin-left: 10px;
+}
+.yourWorld {
+  background: linear-gradient(to bottom, #2dabf9 5%, #0688fa 100%);
+  border-radius: 7px;
+  padding: 10px 15px;
+  color: #ffffff;
+  display: inline-block;
+  font: normal bold 13px/1 "Open Sans", sans-serif;
+  text-align: center;
+  border: 0;
+  cursor: pointer;
+}
+.left-top {
+  margin-right: 2%;
+}

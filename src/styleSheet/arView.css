@@ -1,0 +1,92 @@
+.ar-view-container {
+  width: 100%;
+  height: calc(100vh - 7vh);
+  background-color:#00008b3d;
+}
+
+.ar-container {
+  /* background-color: black; */
+}
+
+.container-ar-viewer {
+  width: 100%;
+  height: 100%;
+}
+
+.ar-view-container {
+  width: 95%;
+  height: 95%;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+}
+
+#modelviewer {
+  width: 100%;
+  height: inherit;
+  /* background-color: aqua !important; */
+}
+
+.HotspotAnnotation {
+  color: black;
+}
+
+.Hotspot {
+  border: none;
+  padding: 5px 10px;
+  border-radius: 7px;
+  display: none;
+}
+
+#ar-button {
+  background: linear-gradient(to bottom, #2dabf9 5%, #0688fa 100%);
+  border-radius: 7px;
+  padding: 5px 10px;
+  color: #ffffff;
+  display: inline-block;
+  font: normal bold 13px/1 "Open Sans", sans-serif;
+  text-align: center;
+  border: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.ar-top-container-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.satellite-name {
+  color: white;
+  -webkit-text-stroke: 1.5px black;
+  font-size: 25px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.ar-logo {
+  cursor: pointer;
+}
+
+.ar-top-container-left {
+  margin-top: 8px;
+  display: flex;
+  align-items: baseline;
+}
+.controlar-Bar{
+  width: 400px;
+  height: 50px;
+  border-radius: 20px;
+  background-color: #ffffff;
+  display: flex;
+  padding-top: 10px;
+  justify-content: space-evenly;
+  position: absolute;
+  bottom: 10%;
+  left: 30%;
+}
+.ar-logo{
+  cursor: pointer;
+}
