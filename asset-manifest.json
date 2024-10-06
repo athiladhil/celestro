@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/celestro/static/css/main.181c9465.css",
-    "main.js": "/celestro/static/js/main.e081ca96.js",
+    "main.css": "/celestro/static/css/main.01a96652.css",
+    "main.js": "/celestro/static/js/main.612737e5.js",
     "static/media/Celestro Logo_final.png": "/celestro/static/media/Celestro Logo_final.348d185776ff0be2b6b7.png",
     "static/media/pin.svg": "/celestro/static/media/pin.f0a50fad482cb92ed5a74870e3f3ad63.svg",
     "static/media/left arrow.svg": "/celestro/static/media/left arrow.464f530762cae4590962c5260d7a9a25.svg",
@@ -13,12 +13,12 @@
     "static/media/share ar.svg": "/celestro/static/media/share ar.20d19705c20e0ba8b80f3257565fb4c6.svg",
     "static/media/AR.svg": "/celestro/static/media/AR.bfb05bc2fc7cc2c4e58210f517f79db1.svg",
     "index.html": "/celestro/index.html",
-    "static/media/Slider.svg": "/celestro/static/media/Slider.600d3840ac326c1f45a0b72360b84391.svg",
-    "main.181c9465.css.map": "/celestro/static/css/main.181c9465.css.map",
-    "main.e081ca96.js.map": "/celestro/static/js/main.e081ca96.js.map"
+    "static/media/Slider.svg": "/celestro/static/media/Slider.5efbabba762c039df7ac8d1fc075fce7.svg",
+    "main.01a96652.css.map": "/celestro/static/css/main.01a96652.css.map",
+    "main.612737e5.js.map": "/celestro/static/js/main.612737e5.js.map"
   },
   "entrypoints": [
-    "static/css/main.181c9465.css",
-    "static/js/main.e081ca96.js"
+    "static/css/main.01a96652.css",
+    "static/js/main.612737e5.js"
   ]
 }
