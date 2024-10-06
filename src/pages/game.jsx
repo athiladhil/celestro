@@ -2,40 +2,19 @@ import "../styleSheet/game.css";
 import { useEffect } from "react";
 
 const Game = () => {
-    // const {isAside,setIsAside} =props;
 
-  const requestFullScreen = () => {
-    const element = document.documentElement; // Fullscreen for the whole page
-    
-    if (element.requestFullscreen) {
-      element.requestFullscreen().catch(err => {
-        console.error("Fullscreen request failed", err);
-      });
-    } else if (element.mozRequestFullScreen) { // Firefox
-      element.mozRequestFullScreen().catch(err => {
-        console.error("Fullscreen request failed", err);
-      });
-    } else if (element.webkitRequestFullscreen) { // Chrome, Safari, and Opera
-      element.webkitRequestFullscreen().catch(err => {
-        console.error("Fullscreen request failed", err);
-      });
-    } else if (element.msRequestFullscreen) { // IE/Edge
-      element.msRequestFullscreen().catch(err => {
-        console.error("Fullscreen request failed", err);
-      });
-    }
-  };
+    return (
+        <div className="game-working-area">
+            {/* Your game content goes here */}
+            {/* <img src="workplace.jpg" alt="Workplace" usemap="#workmap">
 
-  useEffect(() => {
-    // setIsAside(true);
-    requestFullScreen(); // Attempt to trigger fullscreen automatically when the component mounts
-  }, []);
-
-  return (
-    <div className="game-working-area">
-      {/* Your game content goes here */}
-    </div>
-  );
+<map name="workmap">
+  <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
+  <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
+  <area shape="circle" coords="337,300,44" alt="Coffee" href="coffee.htm">
+</map> */}
+        </div>
+    );
 };
 
 export default Game;

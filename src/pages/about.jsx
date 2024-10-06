@@ -15,14 +15,18 @@ const About = () => {
         margin: 'auto',
         overflow: 'hidden',
         color:'#d3d3d3 !important',
+        display: 'flex', justifyContent: 'center',
+        flexDirection:'column',
+        alignItems: 'center'
     },
     section: {
         background: 'white',
+        width:'90%',
         margin: '20px 0',
         padding: '20px',
         borderRadius: '8px',
-        boxShadow:' rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px',
-        color:'#d3d3d3 !important',
+        boxShadow: 'rgba(0, 0, 0, 0.2) 0px 18px 50px -10px',
+                color:'#d3d3d3 !important',
     },
     image: {
         maxWidth: '100%',
