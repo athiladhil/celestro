@@ -105,7 +105,11 @@ const Home = () => {
     var trueAnomaly = 2 * Math.atan(Math.sqrt((1 + e) / (1 - e)) * Math.tan(E / 2));
     return trueAnomaly
   }
-
+  console.log(planetRef);
+  planetRef.current.forEach(()=>{
+    
+  })
+  
   function updatePosition() {
     var currentPosition = [];
     var deltaTime = 0;
@@ -118,6 +122,8 @@ const Home = () => {
       var Ypos = currentPosition[1];
       var Zpos = currentPosition[2];
       var hBName = heavenlyBodies[hB].name;
+      
+      
       //document.getElementById(hBName).setAttribute('translation', Xpos + " " + Ypos + " " + Zpos);
 
 
@@ -187,13 +193,15 @@ const Home = () => {
   
   useEffect(() => {
     // Wait for the scene to be rendered, and ensure sunRef is populated.
-    if (sunRef.current) {
-      addCelestialBodies("Venus", 0.15);
-      addCelestialBodies("Earth", 0.30);
-      addCelestialBodies("Mars", 0.1);
-      traceOrbits(); // Ensure to trace orbits after the planets are added
-    }
-  }, [sunRef.current]);
+    setTimeout(()=>{
+      if (sunRef.current) {
+        addCelestialBodies("Venus", 0.15);
+        addCelestialBodies("Earth", 0.25);
+        addCelestialBodies("Mars", 0.15);
+        traceOrbits(); // Ensure to trace orbits after the planets are added
+      }
+    },5000);
+  },[sunRef.current]);
   function startUpdate() {
 
     var AUscaler = 1;

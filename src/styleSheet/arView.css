@@ -14,8 +14,8 @@
 }
 
 .ar-view-container {
-  width: 95%;
-  height: 95%;
+  width: 90%;
+  height: 90%;
   border-radius: 7px;
   display: flex;
   flex-direction: column;

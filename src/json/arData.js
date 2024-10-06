@@ -1,59 +1,8 @@
 const arData=[
   {
-      image: "https://athiladhil.github.io/SOURCE/Images/ACRIMSat.png",
-      name: "ACRIMSAT",
-      modelUrl: "https://athiladhil.github.io/SOURCE/3D_MODELS/ACRIMSAT.glb",
-      isHotspots: true,
-      hotspots: [
-          {
-              slot: "hotspot-2",
-              DataPosition: "1334.990309253395m 1752.8326960147526m -1202.9792159689005m",
-              DataNormal: "0.9191323153167029m -2.4998501157905437e-7m 0.39394896489329m",
-              dataVisibilityAttribute : "visible",
-              HotspotAnnotation: "S-Band Antenna"
-          },
-          {
-              slot: "hotspot-3",
-              DataPosition: "41.75527468787689m 1606.5468264090416m 1478.4963790899358m",
-              DataNormal: "0.046554102113011656m 0.9989157700108912m -2.0349445447042303e-9m",
-              dataVisibilityAttribute : "visible",
-              HotspotAnnotation: "Fine Sun Sensor"
-          },
-          {
-              slot: "hotspot-4",
-              DataPosition: "-1291.8679180414158m 1743.150822436911m 1150.7915248548547m",
-              DataNormal: "-4.3711388286737896e-8m 0.9999999999999991m 1.7996631634914545e-15m",
-              dataVisibilityAttribute : "visible",
-              HotspotAnnotation: "S-Band Antenna"
-          },
-          {
-              slot: "hotspot-5",
-              DataPosition: "-1038.0189894101347m 1748.0021887275514m -1095.0117424147454m",
-              DataNormal: "5.395057500142879e-7m 0.9999999999997594m -4.363042396534333e-7m",
-              dataVisibilityAttribute : "visible",
-              HotspotAnnotation: "UHF Antenna"
-          },
-          {
-              slot: "hotspot-6",
-              DataPosition: "30.964737876255185m 1754.2600111191464m -3562.810425028255m",
-              DataNormal: "-4.3711388286737896e-8m 0.9999999999999991m 1.7996631634914545e-15m",
-              dataVisibilityAttribute : "visible",
-              HotspotAnnotation: "Solar Panel"
-          },
-          {
-              slot: "hotspot-7",
-              DataPosition: "182.02131891583656m 2132.6936114720334m 50.04554907957072m",
-              DataNormal: "-4.3711388286737896e-8m 0.9999999999999991m 1.7996631634914545e-15m",
-              dataVisibilityAttribute : "visible",
-              HotspotAnnotation: "Acrim Instrument"
-          }
-      ],
-      _id: 1
-  },
-  {
       image: "https://athiladhil.github.io/SOURCE/Images/Landsat-7.png",
       name: "Landsat 7",
-      modelUrl: "https://athiladhil.github.io/SOURCE/3D_MODELS/LANDSAT-7.glb",
+      modelURL: "https://athiladhil.github.io/SOURCE/3D_MODELS/LANDSAT-7.glb",
       isHotspots: true,
       hotspots: [
           {
@@ -106,128 +55,12 @@ const arData=[
               HotspotAnnotation: "Instrument Aperture"
           }
       ],
-      _id: 2
-  },
-  {
-      image: "https://athiladhil.github.io/SOURCE/Images/Landsat-8.png",
-      name: "Landsat 8",
-      modelUrl: "https://athiladhil.github.io/SOURCE/3D_MODELS/LANDSAT-8.glb",
-      isHotspots: true,
-      hotspots: [
-          {
-              slot: "hotspot-1",
-              DataPosition: "-0.3368358699952486m 0.8307154789226285m -1.0145503918944574m",
-              DataNormal: "1m 0m 0m",
-              dataVisibilityAttribute : "visible",
-              HotspotAnnotation: "Solar Array"
-          },
-          {
-              slot: "hotspot-2",
-              DataPosition: "0.2754130601726763m -0.3426591601783666m -2.0976299999999997m",
-              DataNormal: "-5.5511151231257815e-17m 3.3306690738754706e-16m -1m",
-              dataVisibilityAttribute : "visible",
-              HotspotAnnotation: "TIRS"
-          },
-          {
-              slot: "hotspot-3",
-              DataPosition: "0.26684247951676476m -0.011174941393442772m -1.6844900000000003m",
-              DataNormal: "0m -2.220446049250313e-16m 1m",
-              dataVisibilityAttribute : "visible",
-              HotspotAnnotation: "TM"
-          }
-      ],
-      _id: 3
-  },
-  {
-      image: "https://athiladhil.github.io/SOURCE/Images/Suomi_NPP.png",
-      name: "Suomi NPP",
-      modelUrl: "https://athiladhil.github.io/SOURCE/3D_MODELS/Suomi-NPP.glb",
-      isHotspots: true,
-      hotspots: [
-          {
-              slot: "hotspot-1",
-              DataPosition: "-0.2506941653769843m -1.138839602470398m 4.631454389958234m",
-              DataNormal: "0m -1m 0m",
-              dataVisibilityAttribute : "visible",
-              HotspotAnnotation: "Solar Array"
-          },
-          {
-              slot: "hotspot-2",
-              DataPosition: "-0.038623404422877705m -1.8987176424109826m -0.1190014244944928m",
-              DataNormal: "-0.06921211096145453m -0.9709168827761698m -0.22919443805743775m",
-              dataVisibilityAttribute : "visible",
-              HotspotAnnotation: "Propulsion Tank"
-          },
-          {
-              slot: "hotspot-3",
-              DataPosition: "-0.9980879268170071m -0.6748580469494936m 0.13990452775001572m",
-              DataNormal: "-0.9656437377566109m 0.25986903368055614m 0.0005070161494416727m",
-              dataVisibilityAttribute : "visible",
-              HotspotAnnotation: "SMD Antenna"
-          },
-          {
-              slot: "hotspot-4",
-              DataPosition: "-0.768558077499101m -0.23387833443863038m 0.4570839386244394m",
-              DataNormal: "-0.3358240721568247m 0.09000099186100939m 0.9376150670845911m",
-              dataVisibilityAttribute : "visible",
-              HotspotAnnotation: "CERES"
-          },
-          {
-              slot: "hotspot-5",
-              DataPosition: "-1.0498082457111906m -0.369558774702611m -0.37256815507375407m",
-              DataNormal: "-0.9659139027053719m 0.2588635404232847m 0m",
-              dataVisibilityAttribute : "visible",
-              HotspotAnnotation: "ATMS"
-          },
-          {
-              slot: "hotspot-6",
-              DataPosition: "-1.1855858545550504m 0.8622465555156724m 0.5043145672593532m",
-              DataNormal: "-0.8030889899738267m -0.12709855013079702m 0.582146057907694m",
-              dataVisibilityAttribute : "visible",
-              HotspotAnnotation: "HRD Antenna"
-          },
-          {
-              slot: "hotspot-7",
-              DataPosition: "-0.9174861404375658m 0.4213703044765347m -0.3526780851052038m",
-              DataNormal: "-0.9659885554308488m 0.2585848231753402m 0m",
-              dataVisibilityAttribute : "visible",
-              HotspotAnnotation: "CrlS"
-          },
-          {
-              slot: "hotspot-8",
-              DataPosition: "-1.045191794950279m 1.498198316518065m 0.7623414811482885m",
-              DataNormal: "-0.9656205178691838m 0.2599554451308898m 0.00042663432854173327m",
-              dataVisibilityAttribute : "visible",
-              HotspotAnnotation: "Nadir TT&C Antenna"
-          },
-          {
-              slot: "hotspot-9",
-              DataPosition: "-0.5733487038096108m 2.1091920696494846m -0.11758225577413217m",
-              DataNormal: "-0.9659110913880855m 0.2588740289220015m -0.000026137489900638703m",
-              dataVisibilityAttribute : "visible",
-              HotspotAnnotation: "VIIRS"
-          },
-          {
-              slot: "hotspot-10",
-              DataPosition: "1.1492672774250394m 1.6906324281830667m -0.4334484589918315m",
-              DataNormal: "0.7847894218338498m -0.5771764520988102m -0.22577180187153992m",
-              dataVisibilityAttribute : "visible",
-              HotspotAnnotation: "Star Tracker"
-          },
-          {
-              slot: "hotspot-11",
-              DataPosition: "-1.0293496238313118m -1.194400798640097m -0.37860920386471264m",
-              DataNormal: "-0.9657479817257812m 0.2594818602380137m 0m",
-              dataVisibilityAttribute : "visible",
-              HotspotAnnotation: "OMPS"
-          }
-      ],
-      _id: 4
+      _id: 1
   },
   {
       image: "https://athiladhil.github.io/SOURCE/Images/Sentinel-6.png",
-      name: "Sentinel-6 Satellite",
-      modelUrl: "https://athiladhil.github.io/SOURCE/3D_MODELS/Sentinel-6.glb",
+      name: "Sentinel-6 ",
+      modelURL: "https://athiladhil.github.io/SOURCE/3D_MODELS/Sentinel-6.glb",
       isHotspots: true,
       hotspots: [
           {
@@ -287,12 +120,12 @@ const arData=[
               HotspotAnnotation: "Radio Occultation Antenna #2"
           }
       ],
-      _id:5
+      _id:2
   },
   {
       image: "https://athiladhil.github.io/SOURCE/Images/HST.png",
-      name: "Hubble Space Telescope",
-      modelUrl: "https://athiladhil.github.io/SOURCE/3D_MODELS/HUBBLE.glb",
+      name: "HST ",
+      modelURL: "https://athiladhil.github.io/SOURCE/3D_MODELS/HUBBLE.glb",
       isHotspots: true,
       hotspots: [
           {
@@ -317,107 +150,12 @@ const arData=[
               HotspotAnnotation: "Instrument and system bays"
           }
       ],
-      _id: 6
-  },
-  {
-      image: "https://athiladhil.github.io/SOURCE/Images/Chandra.png",
-      name: "Chandra X-ray Observatory",
-      modelUrl: "https://athiladhil.github.io/SOURCE/3D_MODELS/chandra_x-ray_observatory.glb",
-      isHotspots: true,
-      hotspots: [
-          {
-              slot: "hotspot-1",
-              DataPosition: "-92.18882859243104m 5.158138586396262m 350.90187615810714m",
-              DataNormal: "-0.49997343614278245m 0.8660407393336346m -0.000031081036008716993m",
-              dataVisibilityAttribute : "visible",
-              HotspotAnnotation: "Solar array"
-          },
-          {
-              slot: "hotspot-2",
-              DataPosition: "-234.1872512123996m 56.215076561243336m 19.54809359378686m",
-              DataNormal: "0.08715730445359435m 0.9961945614589346m -1.5668358000235416e-7m",
-              dataVisibilityAttribute : "visible",
-              HotspotAnnotation: "Sunshade door"
-          },
-          {
-              slot: "hotspot-3",
-              DataPosition: "-78.02034597890469m -100.24722233521675m 15.855678522088851m",
-              DataNormal: "0.6746462614806191m -0.29951400393435035m -0.6746434490287727m",
-              dataVisibilityAttribute : "visible",
-              HotspotAnnotation: "Low gain antenna"
-          },
-          {
-              slot: "hotspot-4",
-              DataPosition: "-117.16194929187554m -71.86414973912025m 20.916572536572257m",
-              DataNormal: "-0.5095584074664848m 0.6083502376605193m -0.6084901130820529m",
-              dataVisibilityAttribute : "visible",
-              HotspotAnnotation: "Thrusters (4)"
-          },
-          {
-              slot: "hotspot-5",
-              DataPosition: "228.52382622529433m 5.383369721350391m 33.41227977501876m",
-              DataNormal: "0.028334331837152612m 0.06277319342777679m 0.9976255268517447m",
-              dataVisibilityAttribute : "visible",
-              HotspotAnnotation: "Optical bench"
-          },
-          {
-              slot: "hotspot-6",
-              DataPosition: "-132.0364292448878m 32.19143319770589m 33.09643009874929m",
-              DataNormal: "-0.999999999852167m 0.00001713242116337783m -0.0000014650031733870404m",
-              dataVisibilityAttribute : "visible",
-              HotspotAnnotation: "Aspect Camera Stray Light Shade"
-          },
-          {
-              slot: "hotspot-7",
-              DataPosition: "-83.93943213789066m 67.82556796733161m 52.79134716664021m",
-              DataNormal: "0.12724694306915219m 0.6307405195702283m 0.7654897859879221m",
-              dataVisibilityAttribute : "visible",
-              HotspotAnnotation: "Spacecraft Module"
-          },
-          {
-              slot: "hotspot-9",
-              DataPosition: "140.96980572862935m 24.033531099092812m 23.5348069406362m",
-              DataNormal: "-0.026365022162522664m -0.7287292976367002m -0.6842941592416899m",
-              dataVisibilityAttribute : "visible",
-              HotspotAnnotation: "High Resolution Mirror Assembly"
-          }
-      ],
-      _id: 7
-  },
-  {
-      image: "https://athiladhil.github.io/SOURCE/Images/Aqua.png",
-      name: "Aqua",
-      modelUrl: "https://athiladhil.github.io/SOURCE/3D_MODELS/Aqua.glb",
-      isHotspots: true,
-      hotspots: [
-        {
-          slot: "hotspot-1",
-          DataPosition: "240.56393642974578m -31.5668390917395m -1288.9845394503425m",
-          DataNormal: "-4.136383476414815e-8m 0.9986295674774717m 0.05233533184910826m",
-          dataVisibilityAttribute : "visible",
-          HotspotAnnotation: "Solar panel",
-        },
-        {
-          slot: "hotspot-2",
-          DataPosition: "-62.94669267293037m 413.2069924110241m 83.16951528083325m",
-          DataNormal: "-0.9385663351255285m 0.32269475455143865m 0.12231651545895576m",
-          dataVisibilityAttribute : "visible",
-          HotspotAnnotation: "AIRS Atmospheric Infrared Sounder",
-        },
-        {
-          slot: "hotspot-3",
-          DataPosition: "160.92551575436866m -23.230767551231295m -30.472073782458665m",
-          DataNormal: "0.1885560698440816m 0.12818158897171303m 0.9736611776042222m",
-          dataVisibilityAttribute : "visible",
-          HotspotAnnotation: "Antenna Sounder",
-        },
-      ],
-  _id: 8
+      _id: 3
   },
   {
       image: "https://athiladhil.github.io/SOURCE/Images/Aura.png",
       name: "Aura Satellite",
-      modelUrl: "https://athiladhil.github.io/SOURCE/3D_MODELS/Aura.glb",
+      modelURL: "https://athiladhil.github.io/SOURCE/3D_MODELS/Aura.glb",
       isHotspots: true,
       hotspots: [
           {
@@ -463,11 +201,11 @@ const arData=[
               HotspotAnnotation: "HIRDLS"
           }
       ],
-      _id: 9
+      _id: 4
   },
   {
       image: "https://athiladhil.github.io/SOURCE/Images/Parker_Solar_Probe.png",
-      name: "Parker Solar Probe",
+      name: "Parker Solar",
       modelUrl: "https://athiladhil.github.io/SOURCE/3D_MODELS/parker_solar_probe.glb",
       isHotspots: true,
       hotspots: [
@@ -507,150 +245,11 @@ const arData=[
           HotspotAnnotation: "Magnetometer",
         },
       ],
-  _id:10
-  },
-  {
-      image: "https://athiladhil.github.io/SOURCE/Images/terra.jpeg",
-      name: "Terra",
-      modelUrl: "https://athiladhil.github.io/SOURCE/3D_MODELS/Terra.glb",
-      isHotspots: true,
-      hotspots: [
-        {
-          slot: "hotspot-1",
-          DataPosition: "5556.683132931801m -4323.3000500784165m -2367.2103155919067m",
-          DataNormal: "4.3711388286737896e-8m -0.9999999999999991m -1.7996631634914545e-15m",
-          dataVisibilityAttribute : "visible",
-          HotspotAnnotation: "CERES",
-        },
-        {
-          slot: "hotspot-2",
-          DataPosition: "-611.7260582128984m -3604.0200462706484m -1993.4474598053234m",
-          DataNormal: "4.3711388286737896e-8m -0.9999999999999991m -1.7996631634914545e-15m",
-          dataVisibilityAttribute : "visible",
-          HotspotAnnotation: "ASTER",
-        },
-        {
-          slot: "hotspot-3",
-          DataPosition: "1408.7450242557634m -3208.268249546002m -1998.2424709391266m",
-          DataNormal: "-0.0013813085766724333m -0.9999774504968699m 0.006571946773677506m",
-          dataVisibilityAttribute : "visible",
-          HotspotAnnotation: "MOPITT",
-        },
-        {
-          slot: "hotspot-4",
-          DataPosition: "-1304.4929023842592m -3627.6421719353266m -309.58440511776666m",
-          DataNormal: "-0.0004416043100483898m -0.999999866670156m -0.0002676664036227335m",
-          dataVisibilityAttribute : "visible",
-          HotspotAnnotation: "MISR",
-        },
-        {
-          slot: "hotspot-5",
-          DataPosition: "-5819.7257261251125m -1691.9470840594945m -3039.9853413148394m",
-          DataNormal: "-4.371138834224912e-8m -1.3432863140666184e-16m -0.999999999999999m",
-          dataVisibilityAttribute : "visible",
-          HotspotAnnotation: "MODIS",
-        },
-      ],
-      _id:11
-  },
-  {
-      image: "https://athiladhil.github.io/SOURCE/Images/SMAP.png",
-      name: "SMAP",
-      modelUrl: "https://athiladhil.github.io/SOURCE/3D_MODELS/SMAP.glb",
-      isHotspots: true,
-      hotspots: [
-        {
-          slot: "hotspot-1",
-          DataPosition: "-0.34941577344564045m 6.437083999188504m 2.0376416499481778m",
-          DataNormal: "0.3135619720340017m 0.9224234245346695m 0.2254194214434079m",
-          dataVisibilityAttribute : "visible",
-          HotspotAnnotation: "6-meter Deployable Antenna",
-        },
-        {
-          slot: "hotspot-2",
-          DataPosition: "-0.5765694178993304m 2.257773688149621m 0.13810836170635454m",
-          DataNormal: "-0.1479894138839712m 0.9889889450214164m -0.000001924748687382343m",
-          dataVisibilityAttribute : "visible",
-          HotspotAnnotation: "Antenna Feed Horn",
-        },
-        {
-          slot: "hotspot-3",
-          DataPosition: "-1.7914967655544825m 0.38899103077052377m -0.5283307437745393m",
-          DataNormal: "1.0728818658439339e-7m -5.923439013932179e-7m -0.9999999999998188m",
-          dataVisibilityAttribute : "visible",
-          HotspotAnnotation: "Solar Array",
-        },
-        {
-          slot: "hotspot-4",
-          DataPosition: "0.07603663041224773m 0.2979643316514594m 0.6062652396086534m",
-          DataNormal: "0.342685850536373m 5.806946058148506e-7m 0.9394500560656885m",
-          dataVisibilityAttribute : "visible",
-          HotspotAnnotation: "Spacecraft Bus",
-        },
-        {
-          slot: "hotspot-6",
-          DataPosition: "0.06545701216495825m 1.1587206439738704m 0.720779864392525m",
-          DataNormal: "0.23387233755470338m 3.738813629535714e-7m 0.972267313924807m",
-          dataVisibilityAttribute : "visible",
-          HotspotAnnotation: "Spun Instrument Assembly",
-        },
-        {
-          slot: "hotspot-7",
-          DataPosition: "1.0379317286523313m 2.867340883246505m -0.08189783281669172m",
-          DataNormal: "0.021894508111693006m 0.024595519526252906m -0.9994576984213892m",
-          dataVisibilityAttribute : "visible",
-          HotspotAnnotation: "Antenna Boom (deployed)",
-        }
-      ],
-  _id: 12
-  },
-  {
-      image: "https://athiladhil.github.io/SOURCE/Images/CALIPSO.png",
-      name: "Cloud-Aerosol Lidar and Infrared Pathfinder Satellite",
-      modelUrl: "https://athiladhil.github.io/SOURCE/3D_MODELS/CALIPSO.glb",
-      isHotspots: true,
-      hotspots: [
-        {
-          slot: "hotspot-1",
-          DataPosition: "2569.2788305751383m -333.4590578285706m -235.69376616422778m",
-          DataNormal: "0.0028270525812871604m -0.8448673901194834m 0.5349683176473121m",
-          dataVisibilityAttribute : "visible",
-          HotspotAnnotation: "Solar Array",
-        },
-        {
-          slot: "hotspot-3",
-          DataPosition: "566.4341587299105m 1288.7916520194467m -13.928524837552231m",
-          DataNormal: "0.004286028468638129m 0.9999870644399502m 0.0027387794246469467m",
-          dataVisibilityAttribute : "visible",
-          HotspotAnnotation: "X-band Antenna",
-        },
-        {
-          slot: "hotspot-4",
-          DataPosition: "-37.4325705233523m -1011.8761155871161m -837.0323412120615m",
-          DataNormal: "-0.4251681753880115m -0.9009988480042352m -0.08621541934173052m",
-          dataVisibilityAttribute : "visible",
-          HotspotAnnotation: "S-band Antenna",
-        },
-        {
-          slot: "hotspot-5",
-          DataPosition: "-163.6540824231506m -1125.8234245405365m -447.2986555122825m",
-          DataNormal: "0.22623557831235627m -0.6841375189432191m 0.6933781928211258m",
-          dataVisibilityAttribute : "visible",
-          HotspotAnnotation: "Propulsion System",
-        },
-        {
-          slot: "hotspot-6",
-          DataPosition: "77.84618394086351m 224.32452096824818m 866.8674387352166m",
-          DataNormal: "0.0013277277640805607m -0.00015949385209256626m 0.9999991058499481m",
-          dataVisibilityAttribute : "visible",
-          HotspotAnnotation: "Imaging infrared radiometer",
-        }
-      ],
-      _id:13
+  _id:5
   },
   {
       image: "https://athiladhil.github.io/SOURCE/Images/ISS.png",
-      name: "International Space Station (ISS)",
+      name: "ISS",
       modelUrl: "https://athiladhil.github.io/SOURCE/3D_MODELS/international_space_station_iss.glb",
       isHotspots: true,
       hotspots: [
@@ -676,11 +275,11 @@ const arData=[
           HotspotAnnotation: "Solar Array",
         }
       ],
-      _id: 14
+      _id: 6
   },
   {
       image: "https://athiladhil.github.io/SOURCE/Images/JWST.png",
-      name: "James Webb Space Telescope (JWST)",
+      name: "JWST",
       modelUrl: "https://athiladhil.github.io/SOURCE/3D_MODELS/James_webb_space_telescope.glb",
       isHotspots: true,
       hotspots: [
@@ -727,12 +326,12 @@ const arData=[
           HotspotAnnotation: "Spacecraft Bus",
         }
       ],
-      _id: 15
+      _id: 7
   },
   {
       image: "https://athiladhil.github.io/SOURCE/Images/SWOT.jpeg",
-      name: "Surface Water and Ocean Topography (SWOT)",
-      modelUrl: "https://athiladhil.github.io/SOURCE/3D_MODELS/SWOT.glb",
+      name: "SWOT",
+      modelUrl: "Shttps://athiladhil.github.io/SOURCE/3D_MODELS/SWOT.glb",
       isHotspots: true,
       hotspots: [
         {
@@ -771,7 +370,7 @@ const arData=[
           HotspotAnnotation: "Nadir Altimeter",
         }
       ],
-  _id:16
+  _id:8
   },
   {
       image: "https://athiladhil.github.io/SOURCE/Images/dawn.jpeg",
@@ -829,12 +428,12 @@ const arData=[
           HotspotAnnotation: "Star Tracker",
         }
       ],
-  _id:17
+  _id:9
   },
   {
       image: "https://athiladhil.github.io/SOURCE/Images/MAVEN.png",
       name: "Maven Satellite",
-      modelUrl: "https://athiladhil.github.io/SOURCE/3D_MODELS/Maven.glb",
+      modelURL: "https://athiladhil.github.io/SOURCE/3D_MODELS/Maven.glb",
       isHotspots: true,
       hotspots: [
           {
@@ -908,7 +507,7 @@ const arData=[
               HotspotAnnotation: "Electra (behind)"
           }
       ],
-      _id: 18
+      _id: 10
   },
   {
       image: "https://athiladhil.github.io/SOURCE/Images/Juno.png",
@@ -945,7 +544,7 @@ const arData=[
           HotspotAnnotation: "Jovian Auroral Distributions Experiment",
         }
       ],
-      _id: 19
+      _id: 11
   },
   {
       image: "https://athiladhil.github.io/SOURCE/Images/grace.png",
@@ -982,7 +581,7 @@ const arData=[
           HotspotAnnotation: "K/Ka Band Antenna",
         }
       ],
-  _id: 20
+  _id: 12
   },
   {
       image: "https://athiladhil.github.io/SOURCE/Images/THEMIS.png",
@@ -1019,12 +618,12 @@ const arData=[
           HotspotAnnotation: "Radial EFIs",
         }
       ],
-      _id: 21
+      _id: 13
   },
   {
       image: "https://athiladhil.github.io/SOURCE/Images/TADR.png",
-      name: "Tracking and Data Relay Satellites",
-      modelUrl: "https://athiladhil.github.io/SOURCE/3D_MODELS/TADR.glb",
+      name: "TDRS",
+      modelURL: "https://athiladhil.github.io/SOURCE/3D_MODELS/TADR.glb",
       isHotspots: true,
       hotspots: [
           {
@@ -1070,51 +669,9 @@ const arData=[
               HotspotAnnotation: "Multiple access antenna"
           }
       ],
-      _id: 22
-  },
-  {
-      image: "https://athiladhil.github.io/SOURCE/Images/jason.png",
-      name: "JASON 2",
-      modelUrl: "https://athiladhil.github.io/SOURCE/3D_MODELS/JASON-2.glb",
-      isHotspots: true,
-      hotspots: [
-          {
-              slot: "hotspot-1",
-              DataPosition: "-14.55486195560569m 16.67729963042093m 16.007059134875558m",
-              DataNormal: "0.9914645437216235m 4.333829146659135e-8m 0.13037660274324903m",
-              dataVisibilityAttribute : "visible",
-              HotspotAnnotation: "DORIS"
-          },
-          {
-              slot: "hotspot-2",
-              DataPosition: "-17.246605127263564m 9.24805998852533m -15.85402336107994m",
-              DataNormal: "-0.9914426081571641m -4.333733263231864e-8m -0.130543305958284m",
-              dataVisibilityAttribute : "visible",
-              HotspotAnnotation: "LRA"
-          },
-          {
-              slot: "hotspot-3",
-              DataPosition: "-0.09807177756224883m 6.16690342535567m -4.889548907578618m",
-              DataNormal: "-0.1790320898004472m 0.9557790601436745m 0.23331073488495765m",
-              dataVisibilityAttribute : "visible",
-              HotspotAnnotation: "POSEIDON 3:altimeter"
-          },
-          {
-              slot: "hotspot-4",
-              DataPosition: "20.168077729703448m -21.285289720430637m 6.042864509232061m",
-              DataNormal: "0.2605426692952293m -0.965462333535454m 8.902713770792158e-7m",
-              dataVisibilityAttribute : "visible",
-              HotspotAnnotation: "GPSP"
-          },
-          {
-              slot: "hotspot-5",
-              DataPosition: "36.92200103919675m -6.6375800049057965m 1.598041080663763m",
-              DataNormal: "-0.45398568826320895m 0.8910089735976969m -0.00006181067278792317m",
-              dataVisibilityAttribute : "visible",
-              HotspotAnnotation: "AMR: radiometer"
-          }
-      ],
-      _id: 23
+      _id: 14
   }
   ];
   export default arData;
+  
+  

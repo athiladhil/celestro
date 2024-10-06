@@ -17,7 +17,7 @@ const ArView = () => {
   const navigate = useNavigate();
 
   const clickBoardCopy = () => {
-    navigator.clipboard.writeText("https://kaviyarasu26.github.io/celestro/ar").then(() => {
+    navigator.clipboard.writeText("https://kaviyarasu26.github.io/celestro/").then(() => {
       alert("link copied successfully 😊");
     }).catch((err) => {
       console.log(err);
@@ -126,10 +126,10 @@ const ArView = () => {
             <div className="control-icons">
               <Pin onClick={lables} className="ar-logo"/>
             </div>
-            <div className="control-icons">
+            {/* <div className="control-icons">
               <button slot="ar-button"  id="ar-button">
                 <ARLogo /> &nbsp; Ar
-              </button></div>
+              </button></div> */}
             <div className="control-icons"  >
               <Share onClick={clickBoardCopy} className="ar-logo" />
             </div>
