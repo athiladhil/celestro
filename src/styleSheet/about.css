@@ -7,31 +7,70 @@
 .about-working-area{
     padding: 20px;
 }
-section h2 {
-    color: #000000;
-    padding: 10px;
-}
-
-section p {
-    color: #2e2d2d;
-    padding: 10px;
-}
-
-section ul li a {
-    color: #2e2d2d;
-    text-align: left;
-    padding: 10px;
-}
-
-section ul li {
-    color: #2e2d2d;
-    text-align: left;
-    padding: 10px;
-}
-
-section ul li strong {
-    color: #2e2d2d;
-    text-align: left;
-    font-weight: 600;
-    padding: 10px;
-}
+header {
+    background-color: #8f9d4e;
+    color: rgb(63, 127, 99);
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  .container {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+  }
+  
+  .section {
+    color:black;
+    font-weight: bold;
+    background: white;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1, h2, h3 {
+    color: #393434;
+    line-height: 1.5; /* Ensure headings also have the same line spacing */
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  ul li {
+    list-style: none;
+    margin: 5px 0;
+    color:black;
+  }
+  
+  ul li a {
+    color: #007BFF;
+    text-decoration: none;
+  }
+  
+  ul li a:hover {
+    text-decoration: underline;
+  }
+  strong {
+    font-weight: bold;
+    color:black;
+  }
+  p{
+    color: #0f1721;
+  }
+  .image-topic {
+    font-weight: bold; /* Make the text bold */
+    text-align: center; /* Center the text */
+    margin-top: 10px; /* Space above the text */
+    color: #0f1721; /* Change color to blue for visibility */
+  }

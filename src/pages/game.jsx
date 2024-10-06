@@ -1,18 +1,44 @@
 import "../styleSheet/game.css";
-import { useEffect } from "react";
+
 
 const Game = () => {
 
     return (
         <div className="game-working-area">
-            {/* Your game content goes here */}
-            {/* <img src="workplace.jpg" alt="Workplace" usemap="#workmap">
-
-<map name="workmap">
-  <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
-  <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
-  <area shape="circle" coords="337,300,44" alt="Coffee" href="coffee.htm">
-</map> */}
+            <p>Press ctr + / brefore play</p>
+            <div
+                style={{
+                    position: "relative",
+                    width: "100%",
+                    height: "0",
+                    paddingTop: "56.25%", // 16:9 aspect ratio
+                    paddingBottom: "0",
+                    boxShadow: "0 2px 8px 0 rgba(63,69,81,0.16)",
+                    marginTop: "1.6em",
+                    marginBottom: "0.9em",
+                    overflow: "hidden",
+                    borderRadius: "8px",
+                    willChange: "transform",
+                }}
+            >
+                <iframe
+                    loading="lazy"
+                    style={{
+                        position: "absolute",
+                        width: "1152px", // Specify width in pixels
+                        height: "648px", // Specify height in pixels
+                        top: "0",
+                        left: "0",
+                        border: "none",
+                        padding: "0",
+                        margin: "0",
+                    }}
+                    src="https://www.canva.com/design/DAGSJO2wLkU/kzDKe7gYEXdyWJ3f5SxqVA/view?embed"
+                    allowFullScreen
+                    allow="fullscreen"
+                    title="Canva Design"
+                ></iframe>
+            </div>
         </div>
     );
 };

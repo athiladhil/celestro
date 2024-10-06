@@ -2,7 +2,7 @@ const arData=[
   {
       image: "https://athiladhil.github.io/SOURCE/Images/Landsat-7.png",
       name: "Landsat 7",
-      modelURL: "https://athiladhil.github.io/SOURCE/3D_MODELS/LANDSAT-7.glb",
+      modelUrl: "https://athiladhil.github.io/SOURCE/3D_MODELS/LANDSAT-7.glb",
       isHotspots: true,
       hotspots: [
           {
@@ -60,7 +60,7 @@ const arData=[
   {
       image: "https://athiladhil.github.io/SOURCE/Images/Sentinel-6.png",
       name: "Sentinel-6 ",
-      modelURL: "https://athiladhil.github.io/SOURCE/3D_MODELS/Sentinel-6.glb",
+      modelUrl: "https://athiladhil.github.io/SOURCE/3D_MODELS/Sentinel-6.glb",
       isHotspots: true,
       hotspots: [
           {
@@ -125,7 +125,7 @@ const arData=[
   {
       image: "https://athiladhil.github.io/SOURCE/Images/HST.png",
       name: "HST ",
-      modelURL: "https://athiladhil.github.io/SOURCE/3D_MODELS/HUBBLE.glb",
+      modelUrl: "https://athiladhil.github.io/SOURCE/3D_MODELS/HUBBLE.glb",
       isHotspots: true,
       hotspots: [
           {
@@ -155,7 +155,7 @@ const arData=[
   {
       image: "https://athiladhil.github.io/SOURCE/Images/Aura.png",
       name: "Aura Satellite",
-      modelURL: "https://athiladhil.github.io/SOURCE/3D_MODELS/Aura.glb",
+      modelUrl: "https://athiladhil.github.io/SOURCE/3D_MODELS/Aura.glb",
       isHotspots: true,
       hotspots: [
           {
@@ -433,7 +433,7 @@ const arData=[
   {
       image: "https://athiladhil.github.io/SOURCE/Images/MAVEN.png",
       name: "Maven Satellite",
-      modelURL: "https://athiladhil.github.io/SOURCE/3D_MODELS/Maven.glb",
+      modelUrl: "https://athiladhil.github.io/SOURCE/3D_MODELS/Maven.glb",
       isHotspots: true,
       hotspots: [
           {
@@ -623,7 +623,7 @@ const arData=[
   {
       image: "https://athiladhil.github.io/SOURCE/Images/TADR.png",
       name: "TDRS",
-      modelURL: "https://athiladhil.github.io/SOURCE/3D_MODELS/TADR.glb",
+      modelUrl: "https://athiladhil.github.io/SOURCE/3D_MODELS/TADR.glb",
       isHotspots: true,
       hotspots: [
           {
