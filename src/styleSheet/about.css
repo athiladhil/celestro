@@ -3,9 +3,10 @@
     height: 90vh;
     border-radius: 0px;
     overflow-y: scroll;
+}
+.about-working-area{
     padding: 20px;
 }
-
 section h2 {
     color: #000000;
 }

@@ -40,7 +40,7 @@ const About = () => {
 };
   return (
   <div className="about-working-area">
-    <div>
+    <div className="sample">
             <header style={styles.header}>
                 <h1>Celestro: Orrery Web App for Near-Earth Objects</h1>
             </header>

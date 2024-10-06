@@ -1,12 +1,41 @@
 import "../styleSheet/game.css";
+import { useEffect } from "react";
 
-const Game =()=>{
-    return(
-        <div className="game-working-area">
-            {/* <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQAJ5TnGIKsA1HKr19cRGNvgKa0GQHg3ZkzscCeNRUHUE3jnhzCungHCSITZvGzaDTnoECqq-ton9vo/embed?start=false&loop=false&delayms=3000&rm=minimal" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" ></iframe> */}
-            <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRyRoth39wmXqB-Twc54ZuqlTgwgDCaOQZ5aUGv02l30cXHrKz7XPSkTDrdBUsWJ59DjDSqFuLGhF8X/embed?start=false&loop=false&delayms=3000&rm=minimal" frameborder="0" width="1100" height="652" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-        </div>
-    );
-}
+const Game = () => {
+    // const {isAside,setIsAside} =props;
+
+  const requestFullScreen = () => {
+    const element = document.documentElement; // Fullscreen for the whole page
+    
+    if (element.requestFullscreen) {
+      element.requestFullscreen().catch(err => {
+        console.error("Fullscreen request failed", err);
+      });
+    } else if (element.mozRequestFullScreen) { // Firefox
+      element.mozRequestFullScreen().catch(err => {
+        console.error("Fullscreen request failed", err);
+      });
+    } else if (element.webkitRequestFullscreen) { // Chrome, Safari, and Opera
+      element.webkitRequestFullscreen().catch(err => {
+        console.error("Fullscreen request failed", err);
+      });
+    } else if (element.msRequestFullscreen) { // IE/Edge
+      element.msRequestFullscreen().catch(err => {
+        console.error("Fullscreen request failed", err);
+      });
+    }
+  };
+
+  useEffect(() => {
+    // setIsAside(true);
+    requestFullScreen(); // Attempt to trigger fullscreen automatically when the component mounts
+  }, []);
+
+  return (
+    <div className="game-working-area">
+      {/* Your game content goes here */}
+    </div>
+  );
+};
 
 export default Game;
