@@ -53,22 +53,24 @@ const Home = () => {
 
   var heavenlyBodies = [Earth, Venus, Mars];
 
+  
+  
   function addCelestialBodies(identifier, radius) {
-    const position = [0, 0, 5];
-    const index = planetRef.current.length;
-
+    const position = [0, 0, 5]; 
+    const geometry = new THREE.SphereGeometry(radius, 40, 40);
+    const material = new THREE.MeshBasicMaterial({ color: 0xffff00 });
+    const sphere = new THREE.Mesh(geometry, material);
+    
     if (sunRef.current) {
-      const geometry = new THREE.SphereGeometry(radius, 40, 40);
-      const material = new THREE.MeshBasicMaterial({ color: 0xffff00 });
-      const sphere = new THREE.Mesh(geometry, material);
       sunRef.current.add(sphere);
       sphere.position.set(...position);
-      planetRef.current[index] = sphere;
+      sphere.name = identifier;  // Add the identifier as a name
+      planetRef.current.push(sphere);  // Add mesh to the planetRef array
     } else {
       console.error('sunRef is not defined yet..');
     }
-    
   }
+  
 
   function addCelestialBodiesWithParents(parentUseRef, childUseRef, radius,) {
     var x = 0; var y = 0; var z = -5;
@@ -88,17 +90,17 @@ const Home = () => {
     var tol = 0.0001;
     var eAo = M;
     var ratio = 1;
+    var eccentricAnomaly = eAo;  // Initialize eccentricAnomaly
     while (Math.abs(ratio) > tol) {
       var f_E = eAo - e * Math.sin(eAo) - M;
       var f_Eprime = 1 - e * Math.cos(eAo);
       ratio = f_E / f_Eprime;
       if (Math.abs(ratio) > tol) {
         eAo = eAo - ratio;
-      } else {
-        eccentricAnomaly = eAo;
+        eccentricAnomaly = eAo; // Ensure eccentricAnomaly is updated here
       }
     }
-    return eccentricAnomaly;
+    return eccentricAnomaly;  // Return the eccentricAnomaly at the end
   }
 
   function eccentricToTrueAnomaly(e, E) {
@@ -106,46 +108,81 @@ const Home = () => {
     return trueAnomaly
   }
   console.log(planetRef);
-  planetRef.current.forEach(()=>{
+  planetRef.current.forEach((ele)=>{
+    const mesh=ele;
+    console.log(mesh);
     
-  })
+  });
   
+  // function updatePosition() {
+  //   var currentPosition = [];
+  //   var deltaTime = 0;
+  //   for (var hB in heavenlyBodies) {
+
+  //     var hbTAnomoly = heavenlyBodies[hB].trueAnomoly;
+  //     currentPosition = heavenlyBodies[hB].propagate(hbTAnomoly);
+
+  //     var Xpos = currentPosition[0];
+  //     var Ypos = currentPosition[1];
+  //     var Zpos = currentPosition[2];
+  //     //update the position of the
+      
+      
+  //     var n = (2 * Math.PI) / (heavenlyBodies[hB].period * 365.25);
+  //     var e = heavenlyBodies[hB].oE;
+  //     var f = heavenlyBodies[hB].trueAnomoly
+  //     var eA = trueToEccentricAnomaly(e, f)
+
+  //     var m0 = eA - e * Math.sin(eA);
+  //     deltaTime = simSpeed * n
+
+  //     var mA = deltaTime + m0
+
+  //     heavenlyBodies[hB].time = heavenlyBodies[hB].time + deltaTime
+  //     eA = meanToEccentricAnomaly(e, mA)
+  //     var trueAnomaly = eccentricToTrueAnomaly(e, eA)
+  //     heavenlyBodies[hB].trueAnomoly = trueAnomaly
+  //   }
+  //   updateTheDate();
+
+  // };
+
+
   function updatePosition() {
-    var currentPosition = [];
     var deltaTime = 0;
-    for (var hB in heavenlyBodies) {
-
-      var hbTAnomoly = heavenlyBodies[hB].trueAnomoly;
-      currentPosition = heavenlyBodies[hB].propagate(hbTAnomoly);
-
-      var Xpos = currentPosition[0];
-      var Ypos = currentPosition[1];
-      var Zpos = currentPosition[2];
-      var hBName = heavenlyBodies[hB].name;
-      
-      
-      //document.getElementById(hBName).setAttribute('translation', Xpos + " " + Ypos + " " + Zpos);
-
-
-      var n = (2 * Math.PI) / (heavenlyBodies[hB].period * 365.25);
-      var e = heavenlyBodies[hB].oE;
-      var f = heavenlyBodies[hB].trueAnomoly
-      var eA = trueToEccentricAnomaly(e, f)
-
-      var m0 = eA - e * Math.sin(eA);
-      deltaTime = simSpeed * n
-
-      var mA = deltaTime + m0
-
-      heavenlyBodies[hB].time = heavenlyBodies[hB].time + deltaTime
-      eA = meanToEccentricAnomaly(e, mA)
-      var trueAnomaly = eccentricToTrueAnomaly(e, eA)
-      heavenlyBodies[hB].trueAnomoly = trueAnomaly
-    }
+    
+    heavenlyBodies.forEach((body, index) => {
+      // Propagate the current true anomaly to get the new position
+      const currentPosition = body.propagate(body.trueAnomoly);
+      const [Xpos, Ypos, Zpos] = currentPosition;
+  
+      // Update the mesh position if it exists
+      if (planetRef.current[index]) {
+        planetRef.current[index].position.set(Xpos, Ypos, Zpos);
+      } else {
+        console.warn(`No mesh found for ${body.name} at index ${index}`);
+      }
+  
+      // Orbital Mechanics Calculations
+      const n = (2 * Math.PI) / (body.period * 365.25); // Mean motion
+      const e = body.oE;
+      const f = body.trueAnomoly;
+      let eA = trueToEccentricAnomaly(e, f);
+  
+      const m0 = eA - e * Math.sin(eA);
+      deltaTime = simSpeed * n;
+  
+      let mA = deltaTime + m0;
+      body.time += deltaTime;
+  
+      eA = meanToEccentricAnomaly(e, mA);
+      const trueAnomaly = eccentricToTrueAnomaly(e, eA);
+      body.trueAnomoly = trueAnomaly;
+    });
+  
     updateTheDate();
-
-  };
-
+  }
+  
   function updateTheDate() {
     if (simSpeed == 1) {
       epoch.setDate(epoch.getDate() + 1);
@@ -172,12 +209,12 @@ const Home = () => {
         j += 1;
       }
 
-      // Create geometry and material for the orbit
       const geometry = new THREE.BufferGeometry().setFromPoints(points);
       const material = new THREE.LineBasicMaterial({ color: 0xff0000 });
       const ellipse = new THREE.Line(geometry, material);
 
-      // Ensure sunRef exists before adding the orbit
+
+
       if (sunRef.current) {
         // const geometry = new THREE.BufferGeometry().setFromPoints(points);
         // const material = new THREE.LineBasicMaterial({ color: 0xff0000 });
@@ -192,13 +229,12 @@ const Home = () => {
   
   
   useEffect(() => {
-    // Wait for the scene to be rendered, and ensure sunRef is populated.
     setTimeout(()=>{
       if (sunRef.current) {
         addCelestialBodies("Venus", 0.15);
         addCelestialBodies("Earth", 0.25);
         addCelestialBodies("Mars", 0.15);
-        traceOrbits(); // Ensure to trace orbits after the planets are added
+        traceOrbits(); 
       }
     },5000);
   },[sunRef.current]);
@@ -206,9 +242,9 @@ const Home = () => {
 
     var AUscaler = 1;
 
-    for (var hB in asteroidLabels) {
-      heavenlyBodies[hB].smA = heavenlyBodies[hB].smA * AUscaler;
-    }
+    // for (var hB in asteroidLabels) {
+    //   heavenlyBodies[hB].smA = heavenlyBodies[hB].smA * AUscaler;
+    // }
 
 
     addCelestialBodies("Venus", 0.15);
@@ -227,7 +263,9 @@ const Home = () => {
     setInterval(function () { updatePosition() }, 50);
 
   }
-
+  useEffect(()=>{
+    startUpdate();
+  },[])
   
   return (
     <div className="home-working-area">

@@ -105,7 +105,11 @@ const Home = () => {
     var trueAnomaly = 2 * Math.atan(Math.sqrt((1 + e) / (1 - e)) * Math.tan(E / 2));
     return trueAnomaly
   }
-
+  console.log(planetRef);
+  planetRef.current.forEach(()=>{
+    
+  })
+  
   function updatePosition() {
     var currentPosition = [];
     var deltaTime = 0;
@@ -117,10 +121,8 @@ const Home = () => {
       var Xpos = currentPosition[0];
       var Ypos = currentPosition[1];
       var Zpos = currentPosition[2];
-      var hBName = heavenlyBodies[hB].name;
-      //document.getElementById(hBName).setAttribute('translation', Xpos + " " + Ypos + " " + Zpos);
-
-
+      // update the position of the each objects 
+      
       var n = (2 * Math.PI) / (heavenlyBodies[hB].period * 365.25);
       var e = heavenlyBodies[hB].oE;
       var f = heavenlyBodies[hB].trueAnomoly
@@ -146,6 +148,7 @@ const Home = () => {
     } else { epoch.setTime(epoch.getTime() + simSpeed * 24 * 3600000); }
 
     //document.getElementById("modelDate").textContent = (epoch.getMonth() + 1) + "-" + epoch.getDate() + "-" + epoch.getFullYear();
+    
   }
 
   function traceOrbits() {
@@ -166,12 +169,12 @@ const Home = () => {
         j += 1;
       }
 
-      // Create geometry and material for the orbit
       const geometry = new THREE.BufferGeometry().setFromPoints(points);
       const material = new THREE.LineBasicMaterial({ color: 0xff0000 });
       const ellipse = new THREE.Line(geometry, material);
 
-      // Ensure sunRef exists before adding the orbit
+
+
       if (sunRef.current) {
         // const geometry = new THREE.BufferGeometry().setFromPoints(points);
         // const material = new THREE.LineBasicMaterial({ color: 0xff0000 });
@@ -186,14 +189,15 @@ const Home = () => {
   
   
   useEffect(() => {
-    // Wait for the scene to be rendered, and ensure sunRef is populated.
-    if (sunRef.current) {
-      addCelestialBodies("Venus", 0.15);
-      addCelestialBodies("Earth", 0.30);
-      addCelestialBodies("Mars", 0.1);
-      traceOrbits(); // Ensure to trace orbits after the planets are added
-    }
-  }, [sunRef.current]);
+    setTimeout(()=>{
+      if (sunRef.current) {
+        addCelestialBodies("Venus", 0.15);
+        addCelestialBodies("Earth", 0.25);
+        addCelestialBodies("Mars", 0.15);
+        traceOrbits(); 
+      }
+    },5000);
+  },[sunRef.current]);
   function startUpdate() {
 
     var AUscaler = 1;
