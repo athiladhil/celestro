@@ -1,2 +1,58 @@
-# celestro
-NASA space App Challenge 
+High Level Summary:
+The "Create an Orrery Web App that Displays Near-Earth Objects" challenge involves building a web-based orrery that visualizes real-time positions of Near-Earth Objects (NEOs) using 3D models, Augmented Reality (AR), and Virtual Reality (VR) for interactive experiences. Users can explore the solar system, observe NEO movements, and interact with celestial bodies through AR and VR, making it an educational and immersive tool for understanding space. Additionally, the app integrates a gamified component called AstroDefend, where players can strategize planetary defense against potential asteroid threats, combining real-time data with a fun, engaging experience to raise awareness about planetary defense.
+
+Project Details:
+Celestro: A Cutting-Edge Orrery Web App for Near-Earth Objects
+Celestro is a groundbreaking web app that brings the cosmos to life by visualizing real-time positions of Near-Earth Objects (NEOs) with interactive 3D models, Augmented Reality (AR), and Virtual Reality (VR). Users can dive into the solar system, observe NEO trajectories, and explore celestial bodies in fully immersive AR and VR environments. It's both educational and entertaining, offering a fresh perspective on space exploration. Celestro also includes AstroDefend, a gamified experience where players devise strategies for planetary defense against asteroid threats, blending real-time data with an engaging, interactive experience to raise awareness about space safety.
+
+Introduction:
+An orrery is a mechanical model of the solar system that illustrates the relative positions, motions, and sometimes the sizes of the planets and moons around the Sun. It serves as a visual and interactive representation of celestial movements, allowing people to understand the orbital dynamics of planets and other objects in space. Traditionally, orreries are constructed using a series of gears, rods, and wheels that simulate the planetary orbits. These mechanical components are carefully designed to replicate the orbital periods and movements in real time or at a sped-up rate for demonstration purposes.
+In modern times, orreries have evolved beyond physical models into computer-generated 3D models, offering even greater flexibility and precision. These digital orreries simulate the solar system using advanced software, allowing users to explore planetary positions and movements from any angle and in any time frame. By leveraging 3D graphics and real-time data, virtual orreries can depict not only planets and moons but also asteroids and other near-Earth objects, making them powerful tools for education, research, and interactive learning in both desktop and VR/AR environments.
+
+Celestro: Orrery Web App Homepage Overview
+The homepage of Celestro welcomes users to a sleek, space-themed interface that offers a seamless journey into the universe. Here, you’ll find intuitive navigation options that guide you through the various features of the web app:
+Home: Your starting point for all things Celestro. This section provides a brief introduction to the app, along with real-time updates on Near-Earth Objects (NEOs) and an overview of the solar system.
+AR: Dive into the Augmented Reality experience, where users can explore celestial bodies, observe NEO movements, and interact with space directly from their own environment. The AR feature allows users to bring the solar system into their world through their mobile devices.
+VR: Enter the Virtual Reality section, offering an immersive space exploration journey. Users can put on their VR headsets and fully engage with planetary objects and NEOs, getting a close-up view of the cosmos in a highly interactive environment.
+About: Learn more about Celestro, its purpose, and the technology behind it. This section provides background information on how the app was developed, its goals in planetary defense awareness, and the gamified AstroDefend feature.
+Share: Users can easily share their space adventures and discoveries across social media platforms. This option allows you to spread awareness about Celestro and invite others to explore the stars with you.
+Your World: Personalize your space exploration experience. This feature lets users track specific Near-Earth Objects (NEOs), customize their interface, and receive notifications for any significant NEO activity related to their location.
+Each section is designed for smooth, user-friendly navigation, making Celestro a captivating tool for both education and entertainment in the field of space exploration.
+
+Celestro: Object Information Page
+When users interact with celestial bodies or Near-Earth Objects (NEOs) in Celestro, they can click on any object to access a detailed Object Information Page. This page is designed to provide a deeper understanding of the selected object and includes the following features:
+Object Overview: At the top of the page, users will see a brief summary of the object, including its name, classification (asteroid, planet, comet, etc.), and its current position in the solar system relative to Earth. A dynamic 3D model of the object spins in real-time, allowing users to zoom in and explore it from different angles.
+Orbital Information: This section provides in-depth details about the object's orbit, such as its perihelion (closest point to the Sun), aphelion (farthest point), orbital period, and eccentricity. A visual representation of the orbit is also shown, helping users visualize its trajectory and potential intersections with Earth’s orbit.
+Physical Characteristics: Users can learn about the object's physical properties, including its size, shape, composition, and surface features. Information on its mass, density, rotation period, and temperature is provided for a comprehensive understanding of the celestial body.
+Historical and Scientific Significance: For objects of special interest, such as famous asteroids or comets, the page includes a section that highlights important historical events or missions related to the object. Users can read about past space missions that studied the object, significant scientific discoveries, and its relevance in planetary defense or exploration efforts.
+Real-Time Data: The page dynamically updates with real-time information, showing the object's current distance from Earth, velocity, and any recent changes in its trajectory. This feature is especially useful for tracking Near-Earth Objects (NEOs) and monitoring potential impacts.
+Interactive AR/VR Exploration: For a more immersive experience, users can switch to Augmented Reality (AR) or Virtual Reality (VR) modes directly from this page. In AR, users can project the 3D model of the object into their environment, while in VR, they can "visit" the object, examining its surface up close as if they were in space.
+Related Objects: At the bottom of the page, Celestro suggests other nearby or related celestial bodies that users may find interesting, based on the current object's location or characteristics. This feature encourages further exploration and learning about the vastness of space.
+Gamified Challenge (AstroDefend): If the object is identified as a potential threat to Earth, users can activate the AstroDefend mode. This gamified feature allows players to simulate defense strategies, learn about planetary defense tactics, and make decisions based on real-time data.
+The Object Information Page serves as a comprehensive hub for anyone looking to delve deeper into the cosmos, offering a wealth of scientific knowledge and interactive tools to enhance the space exploration experience.
+
+Celestro: AR Satellite Exploration Page
+The AR Satellite Exploration Page in Celestro allows users to dive into an immersive augmented reality experience, showcasing a vast array of satellites orbiting the Earth. As users scan their surroundings, they can project 3D models of various satellites into their environment, giving them a close-up view of these marvels of technology. Each satellite hovers realistically, and when clicked, detailed information about the satellite appears. This includes its mission purpose (e.g., communication, weather monitoring, Earth observation), launch date, current status, and the agency responsible for its operation. Through this AR feature, users can explore the intricate web of satellites surrounding Earth, gaining insight into their roles in modern space exploration and everyday life, while also understanding their importance in scientific research and global communication.
+
+Data & resources:	
+	The Celestro web app is built on a rich foundation of resources and data provided by NASA and other space agencies, ensuring accuracy and depth in its visualizations and information. A variety of NASA databases and tools were utilized to create an interactive and educational platform for exploring the cosmos.
+One core element of the app is the Approximate Positions of the Planets, a resource from NASA’s website, which includes the formulae for calculating orbital positions using Keplerian parameters. These are essential for visualizing the movement of planets and objects in space. A Small-Body Database Query was also used to retrieve data on Near-Earth Objects (NEOs), including Potentially Hazardous Asteroids (PHAs), ensuring real-time updates on the movement of these bodies.
+The NASA GitHub repository for mission-viz software played a significant role in shaping the app’s orrery and 3D visualization tools, offering source code and tutorials that were reused and adapted for Celestro. Additionally, the Elliptical Orbit Simulator tutorial, with examples written in R, helped in developing the simulation features of the app. Teams with programming experience were able to port or reuse these orbital propagators, with proper citations, to enhance the user experience.
+The Ontology-driven Orrery and NASA’s Eyes on Asteroids provided further examples of static or dynamic orreries, demonstrating the use of JavaScript and 3D code libraries to depict celestial bodies' movements. The app integrates these visualizations, allowing users to explore orbital trajectories of NEOs and other objects.
+Partnering with European Space Agency’s (ESA) Near Earth Objects Centre (NEOCC), Celestro also benefits from data on asteroid and comet orbits, including their probability of impacting Earth. Additionally, Canada's NEOSSat mission contributes to the cataloging of NEOs, with the Canadian Astronomy Data Center (CADC) making open data from NEOSSat available for further exploration. The NEOSSat tutorial is also incorporated, helping users visualize and understand telescope data more clearly.
+Finally, users of Celestro are encouraged to explore these resources for further customization or learning. They can find free open-source code libraries for 3D graphics or orbital propagators, and leverage tools like CSV-to-JSON converters to enhance their exploration experience. Through partnerships with space agencies and open-source communities, Celestro provides a robust platform that both educates and immerses users in the wonders of space.
+
+References:
+	Space agency data:
+https://ssd.jpl.nasa.gov/planets/approx_pos.html
+https://ssd.jpl.nasa.gov/tools/sbdb_query.html
+https://data.nasa.gov/Space-Science/Near-Earth-Comets-Orbital-Elements-API/ysqn-vd8v/about_data
+https://nasa.github.io/mission-viz/RMarkdown/Elliptical_Orbit_Design.html
+https://nasa.github.io/mission-viz/RMarkdown/ontology_based_orrery_generated_from_R_code.html
+https://nasa.github.io/mission-viz/OntologyDrivenOrrery/An_Orrery_in_ThreeJS.html
+https://eyes.nasa.gov/apps/asteroids/#/home
+https://nasa.github.io/mission-viz/X3Dom/InnerSolarSystem.html
+https://neo.ssa.esa.int/
+https://www.asc-csa.gc.ca/eng/satellites/neossat/
+https://www.cadc-ccda.hia-iha.nrc-cnrc.gc.ca/en/
+
